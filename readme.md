@@ -10,8 +10,7 @@ Follow the following steps to install the project within docker container.
 Create a throw-away container by executing the following command
 -  --docker run --rm -v $(pwd):/app composer/composer install
   or --docker run --rm -v ${pwd}:/app composer/composer install
-Starting docker 
--  --docker-compose up
+- Starting docker --docker-compose up
 
 Copy the .env.example file into our own .env file. This file will not be checked into version control copy --.env.example -> --.env
 

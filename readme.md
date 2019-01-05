@@ -92,8 +92,8 @@ Through dedicated controllers we can manage different endpoints easily, all API'
 - The newly product or genre will always be created in english language even if your language is set to a different one.
 
 ## Filtration, Sorting, and Per page limit
-- You can filter by any field by passing ?{field_name}=$value to url.
-- Sorting by any field name by passing ?sort_by=$field_name.
+- You can filter by any field by passing, for example ?field_name={value} to url.
+- Sorting by any field name by passing ?sort_by=field_name.
 - You can set per page ex: ?per_page=2.
 
 ## Using Passport
@@ -131,7 +131,7 @@ Run php artisan passport:client --personal
 Go to My Clients then create new client name and redirect url
 - To obtain access token using the authorization code grand type using this, we need to go to 'api/oauth/authorize?client_id={client_id}&redirect_uri={redirect_url}&response_type=code'.
 - Then login or create a new user then authorize.
-- Copy url and then use any online url decode library ex:www.url-encode-decode.com, to decode the url copy only the code not full url.
+- Copy url and then use any online url decode library ex: www.url-encode-decode.com, to decode the url copy only the code not full url.
 - To obtain an authorization code we need to go to 'oauth/token' with postman, and send a post request with form-data with the following [
 		client_id 	   => {client_id},
 		client_secret  => {client_secret},

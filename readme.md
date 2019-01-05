@@ -143,14 +143,14 @@ Go to My Clients then create new client name and redirect url
 	]
 - You can revoke this client any time by going to Authorized Clients with your browser.
 
-Note: redirect_uri must always match the original redirect url.
+*Note*: redirect_uri must always match the original redirect url.
 
 ### Implicit grant type
 - This can be done by going to 'api/oauth/authorize?client_id={client_id}&redirect_uri={redirect_url}&response_type=token' in your browser and authorize.
 - Then copy access_token from url into by using normal text editor.
 - To use the access token add to header
 	Authorization => Bearer {access_token}
-Note: this access token is only recommended for very specific type of clients, in other case we need to avoid it.
+*Note*: this access token is only recommended for very specific type of clients, in other case we need to avoid it.
 
 ### Refreshing tokens
 - Using a password grant type we obtain a client secret, then send a post request to 'api/oauth/token' with form-data with the following [
@@ -166,7 +166,7 @@ Note: this access token is only recommended for very specific type of clients, i
 		client_secret  => {client_secret},
 		refresh_token  => {refresh_token},	
 	]
-Note: refresh token only can be used one time.
+*Note*: refresh token only can be used one time.
 
 ### Request access token with specific scope without using user interface 
 - Send a post request to 'api/oauth/token' with form-data with the following [

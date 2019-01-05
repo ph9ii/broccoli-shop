@@ -179,4 +179,4 @@ Go to My Clients then create new client name and redirect url
 	]
 
 ### Feedback
-Please send me an e-mail to MOHUM at moattia86@gmail.com. All feedbacks are appreciated.
+Please send me an e-mail to *MOHUM* at moattia86@gmail.com. Any feedback would be greatly appreciated.

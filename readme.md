@@ -31,7 +31,7 @@ Follow the following steps to install the project without docker container, you 
   --php artisan migrate --seed
   --php artisan passport:install
 
-*NOTE: Don't forget to edit your .env file with proper configuration.*
+*Note*: Don't forget to edit your .env file with proper configuration.
 
 ## Consume Endpoints
 - Run --php artisan route:list, to get all available endpoints.

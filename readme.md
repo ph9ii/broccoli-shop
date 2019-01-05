@@ -34,8 +34,8 @@ Follow the following steps to install the project without docker container, you 
 *NOTE: Don't forget to edit your .env file with proper configuration.*
 
 ## Consume Endpoints
-Run --php artisan route:list, to get all available endpoints.
-Note: All endpints are plural and prefixed for example: "/api/products, /api/categories".
+- Run --php artisan route:list, to get all available endpoints.
+*Note*: All endpints are plural and prefixed for example: "/api/products, /api/categories".
 
 ## Get Started
 - Go to 'api/products' using GET request to view all products.
@@ -44,18 +44,18 @@ Note: All endpints are plural and prefixed for example: "/api/products, /api/cat
 
 ## Database & Migrations
 We are using database version control provided to us with laravel, to generate databases schemes and manage migrations.
-Available Migrations: "users, password_rests, products, orders, category_product, order_product, carts, translations".
-Note: We are using integer to speed up computations in database layer.
+-- Available Migrations: "users, password_rests, products, orders, category_product, order_product, carts, translations".
+*Note*: We are using integer to speed up computations in database layer.
 
 ## Models Eloquent ORM
-- We are using Eloquent ORM "\Illuminate\Database\Eloquent\Model" for simply ActiveRecord implementation for working with database, query for data in tables, as well as insert new records into tables.
-Available Models: "Buyer, Cart, User, Seller, Category, Order, Product, Translation".
+We are using Eloquent ORM "\Illuminate\Database\Eloquent\Model" for simply ActiveRecord implementation for working with database, query for data in tables, as well as insert new records into tables.
+-- Available Models: "Buyer, Cart, User, Seller, Category, Order, Product, Translation".
 - We are using "Soft Deletes" on some important models.
 
 ## Policies, Gateways & Scopes
 - Policies: We organize authorization logic around a particular model or resource via using different policies "App\Policies".
-Available Policies: "BuyerPolicy, UserPolicy, SellerPolicy, CarPolicy, and OrderPolicy".
-- Gateways are used here to allow adming actions.
+-- Available Policies: "BuyerPolicy, UserPolicy, SellerPolicy, CarPolicy, and OrderPolicy".
+- Gateways are used here to allow admin actions.
 - Scopes: Scopes allow our API clients to request a specific set of permissions when requesting authorization to access an account. 
 Available Scopes: "BuyerScope, SellerScope".
 
@@ -63,12 +63,13 @@ Available Scopes: "BuyerScope, SellerScope".
 CustomThrottleRequest, Localization, SignatureMiddleware, TransformInput.
 
 ## Mail
-UserCreated: send user a verification code.
-UserMailChanged: send email when user email changed.
+- UserCreated: send user a verification code.
+- UserMailChanged: send email when user email changed.
 
 ## Testing & Factories
-- Run full test suit by running --vendor/bin/phpunit, we are using sqlite for testing and testing helpers.
---Available Tests: BuyersFeatureTest, ProductsFeatureTest, UsersFeatureTest, ProducTest(Unit).
+Run full test suit by running --vendor/bin/phpunit.
+- We are using sqlite for testing and testing helpers.
+-- Available Tests: BuyersFeatureTest, ProductsFeatureTest, UsersFeatureTest, ProducTest(Unit).
 - Factiories: We are using model factory to fake data into database for testing.
 
 ## Application Hacking
@@ -78,8 +79,8 @@ We are using several hacking methods to enhance our application, for example we 
 Through dedicated controllers we can manage different endpoints easily, all API's controllers are extending ApiController "\App\Http\Controllers\ApiController".
 
 ## Transformers Fractal
-Using Fractal provides us presentation and transformation layer for complex data output, and give us extra security layer to prevent other parties from taking advantage of actual data real keys.
-Available Transformers: "BuyerTransformer, SellerTransformer, UserTransformer, ProductTransformer, CategoryTransformer, OrderTransoformer, CartTransformer".
+- Using Fractal provides us presentation and transformation layer for complex data output, and give us extra security layer to prevent other parties from taking advantage of actual data real keys.
+-- Available Transformers: "BuyerTransformer, SellerTransformer, UserTransformer, ProductTransformer, CategoryTransformer, OrderTransoformer, CartTransformer".
 
 ## Headers
 - Authorization with Bearer {token}.
@@ -99,7 +100,7 @@ Available Transformers: "BuyerTransformer, SellerTransformer, UserTransformer, P
 
 ## Using Passport
 ### Obtain a clients credential
-run php artisan passport:client
+Run php artisan passport:client
 - Then copy client secret, after that send a post request with the following form-data to api/oauth/token
 	with the following [
 		grant_type 	  => 'client_credentials',

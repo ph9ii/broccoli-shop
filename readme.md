@@ -66,6 +66,11 @@ CustomThrottleRequest, Localization, SignatureMiddleware, TransformInput.
 UserCreated: send user a verification code.
 UserMailChanged: send email when user email changed.
 
+## Testing & Factories
+- Run full test suit by running --vendor/bin/phpunit, we are using sqlite for testing and testing helpers.
+--Available Tests: BuyersFeatureTest, ProductsFeatureTest, UsersFeatureTest, ProducTest(Unit).
+- Factiories: We are using model factory to fake data into database for testing.
+
 ## Application Hacking
 We are using several hacking methods to enhance our application, for example we are overriding Exceptions, Listening on special events to trigger specific actions, Custom throttle, Custom headers.
 
@@ -83,9 +88,9 @@ Available Transformers: "BuyerTransformer, SellerTransformer, UserTransformer, P
 
 ## Translation
 - The app uses headers to determine user preferred language setting, all languages are compatible.
-- For now movie description, and genre name will be only translated according to the matched translation in the application database or fallback to en by default.
-- You can add/edit(update) a translation of movie's description, or any genre's name using any language, for example by sending request with X-localization: de header to "api/genres/3" with PUT request, now if you send a genre name to update it, that will be automatically inserted into a dedicated table for translation with code 'de', or will update if already existed.
-- The newly movie or genre will always be created in english language even if your language is set to a different one.
+- For now product description, and genre name will be only translated according to the matched translation in the application database or fallback to en by default.
+- You can add/edit(update) a translation of product's description, or any genre's name using any language, for example by sending request with X-localization: de header to "api/genres/3" with PUT request, now if you send a genre name to update it, that will be automatically inserted into a dedicated table for translation with code 'de', or will update if already existed.
+- The newly product or genre will always be created in english language even if your language is set to a different one.
 
 ## Filtration, Sorting, and Per page limit
 - You can filter by any field by passing ?{field_name}=$value to url.
@@ -93,7 +98,6 @@ Available Transformers: "BuyerTransformer, SellerTransformer, UserTransformer, P
 - You can set per page ex: ?per_page=2.
 
 ## Using Passport
-
 ### Obtain a clients credential
 run php artisan passport:client
 - Then copy client secret, after that send a post request with the following form-data to api/oauth/token

@@ -7,29 +7,29 @@
 ## Install with docker container for development
 Follow the following steps to install the project within docker container.
 
-- Create a throw-away container by executing the following command
-  --docker run --rm -v $(pwd):/app composer/composer install
+Create a throw-away container by executing the following command
+-  --docker run --rm -v $(pwd):/app composer/composer install
   or
-  --docker run --rm -v ${pwd}:/app composer/composer install
-- Starting docker 
-  --docker-compose up
+-  --docker run --rm -v ${pwd}:/app composer/composer install
+Starting docker 
+-  --docker-compose up
 
-- Copy the .env.example file into our own .env file. This file will not be checked into version control copy --.env.example -> --.env
+Copy the .env.example file into our own .env file. This file will not be checked into version control copy --.env.example -> --.env
 
-- Run the following commands
-  --docker-compose exec app php artisan key:generate
-  --docker-compose exec app php artisan optimize
-  --docker-compose exec app php artisan migrate --seed
-  --docker-compose exec app php artisan passport:install
+Run the following commands
+-  --docker-compose exec app php artisan key:generate
+-  --docker-compose exec app php artisan optimize
+-  --docker-compose exec app php artisan migrate --seed
+-  --docker-compose exec app php artisan passport:install
 
 ## Install without docker for development
 Follow the following steps to install the project without docker container, you will need php apache server or Nginx with MariaDB or any other compatible database.
-- Run the following commands in your local enviroment inside your app root.
-  --composer install
-  --php artisan key:generate
-  --php artisan optimize
-  --php artisan migrate --seed
-  --php artisan passport:install
+Run the following commands in your local enviroment inside your app root.
+-  --composer install
+-  --php artisan key:generate
+-  --php artisan optimize
+-  --php artisan migrate --seed
+-  --php artisan passport:install
 
 *Note*: Don't forget to edit your .env file with proper configuration.
 

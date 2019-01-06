@@ -97,7 +97,7 @@ Through dedicated controllers we can manage different endpoints easily, all API'
 ## Translation
 - The app uses headers to determine user preferred language setting, all languages are compatible.
 - For now product description, and categories name will be only translated according to the matched translation in the application database or fallback to en by default.
-- You can add/edit(update) a translation of product's description, or any categorie's name using any language, for example by sending request with X-localization: de header to "api/categoriess/3" with PUT request, now if you send a categories name to update it, that will be automatically inserted into a dedicated table for translation with code 'de', or will update if already existed.
+- You can add/edit(update) a translation of product's description, or any categorie's name using any language, for example by sending request with X-localization: 'de' header to "api/categories/3" with PUT request, now if you send a categories name to update it, that will be automatically inserted into a dedicated table for translation with code 'de', or will update if already existed.
 - The newly product or categories will always be created in english language even if your language is set to a different one.
 
 ## Filtration, Sorting, and Per page limit

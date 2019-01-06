@@ -16,11 +16,11 @@ class ProductTransformer extends TransformerAbstract
     {
         return [
             'identifier' => (int)$product->id,
-            'name'       => (string)$product->title,
+            'name'       => (string)$product->name,
             'details'    => (string)$product->transResponse($product, 'description'),
             'stock'      => (int)$product->quantity,
             'situation'  => (string)$product->status,
-            'picture'    => url("img/{$product->image}"),
+            'image'      => url("img/{$product->image}"),
             'price'      => (string) number_format($product->price),
             'seller'     => (int)$product->seller_id,
             'creationDate' => (string)$product->created_at,
@@ -60,11 +60,11 @@ class ProductTransformer extends TransformerAbstract
     {
         $attributes = [
             'identifier' => 'id',
-            'name'       => 'title',
+            'name'       => 'name',
             'details'    => 'description',
             'stock'      => 'quantity',
             'situation'  => 'status',
-            'picture'    => 'image',
+            'image'    => 'image',
             'price'      => 'price',
             'seller'     => 'seller_id',
             'creationDate' => 'created_at',
@@ -79,11 +79,11 @@ class ProductTransformer extends TransformerAbstract
     {
         $attributes = [
             'id'           => 'identifier',
-            'title'        => 'name',
+            'name'         => 'name',
             'description'  => 'details',
             'quantity'     => 'stock',
             'status'       => 'situation',
-            'image'        => 'picture',
+            'image'        => 'image',
             'price'        => 'price',
             'seller_id'    => 'seller',
             'created_at'   => 'creationDate',

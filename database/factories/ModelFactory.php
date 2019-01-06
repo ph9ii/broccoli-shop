@@ -46,7 +46,7 @@ $factory->define(Category::class, function (Faker $faker) {
 $factory->define(Product::class, function (Faker $faker) {
 
     return [
-        'title' => $faker->word,
+        'name' => $faker->word,
         'description' => $faker->paragraph(1),
         'quantity' => $faker->numberBetween(100, 1000),
         'status' => $faker->randomElement([Product::AVAILABLE_PRODUCT, Product::UNAVAILABLE_PRODUCT]),

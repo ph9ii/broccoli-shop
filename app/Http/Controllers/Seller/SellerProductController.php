@@ -53,7 +53,7 @@ class SellerProductController extends ApiController
         $this->allowedAdminAction();
 
         $this->validate($request, [
-            'title' => 'required|max:255',
+            'name' => 'required|max:255',
             'description' => 'required|max:100',
             'quantity' => 'required|integer|min:1',
             'price' => 'required|integer',

@@ -48,8 +48,10 @@ We are using database version control provided to us with laravel, to generate d
 
 ## Models Eloquent ORM
 We are using Eloquent ORM "\Illuminate\Database\Eloquent\Model" for simply ActiveRecord implementation for working with database, query for data in tables, as well as insert new records into tables.
--- Available Models: "Buyer, Cart, User, Seller, Category, Order, Product, Translation".
-- We are using "Soft Deletes" on some important models.
+
+-- Available Models: "Buyer, Cart, User, Seller, Category, Order, Product, Translation". 
+
+We are using "Soft Deletes" on some important models.
 
 ## Policies, Gateways & Scopes
 - Policies: We organize authorization logic around a particular model or resource via using different policies "App\Policies".

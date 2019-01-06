@@ -34,14 +34,14 @@ class Product extends Model
         'pivot',
     ];
 
-    public function setTitleAttribute($title)
+    public function setNameAttribute($name)
     {
-        $this->attributes['title'] = strtolower($title);
+        $this->attributes['name'] = strtolower($name);
     }
 
-    public function getTitleAttribute($title)
+    public function getNameAttribute($name)
     {
-        return ucwords($title);
+        return ucwords($name);
     }
 
     /** 

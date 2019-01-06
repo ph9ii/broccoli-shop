@@ -16,14 +16,14 @@ class SellerProductController extends ApiController
 {
     public function __construct()
     {
-        parent::__construct();
+        // parent::__construct();
 
         $this->middleware('transform.input:' . ProductTransformer::class)->only(['store', 'update']);
-        $this->middleware('scope:manage-products')->except(['index']);
-        $this->middleware('can:view,seller')->only('index');
-        $this->middleware('can:sell,seller')->only('store');
-        $this->middleware('can:update,seller')->only('update');
-        $this->middleware('can:delete,seller')->only('destroy');
+        // $this->middleware('scope:manage-products')->except(['index']);
+        // $this->middleware('can:view,seller')->only('index');
+        // $this->middleware('can:sell,seller')->only('store');
+        // $this->middleware('can:update,seller')->only('update');
+        // $this->middleware('can:delete,seller')->only('destroy');
     }
 
     /**
@@ -50,7 +50,7 @@ class SellerProductController extends ApiController
      */
     public function store(Request $request, User $seller)
     {
-        $this->allowedAdminAction();
+        // $this->allowedAdminAction();
 
         $this->validate($request, [
             'name' => 'required|max:255',

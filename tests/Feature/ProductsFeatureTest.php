@@ -88,7 +88,7 @@ class ProductsFeatureTest extends TestCase
                 "details" => ["The details field is required."],
                 "stock" => ["The stock field is required."],
                 "price" => ["The price field is required."],
-                "picture" => ["The picture field is required."]
+                "image" => ["The image field is required."]
             ]
         ];
 

@@ -43,7 +43,8 @@ Run the following commands in your local enviroment inside your app root.
 ## Database & Migrations
 We are using database version control provided to us with laravel, to generate databases schemes and manage migrations.
 -- Available Migrations: "users, password_rests, products, orders, category_product, order_product, carts, translations".
-*Note*: We are using integer to speed up computations at the database level.
+
+*Note*: We are using integer to speedup computation.
 
 ## Models Eloquent ORM
 We are using Eloquent ORM "\Illuminate\Database\Eloquent\Model" for simply ActiveRecord implementation for working with database, query for data in tables, as well as insert new records into tables.

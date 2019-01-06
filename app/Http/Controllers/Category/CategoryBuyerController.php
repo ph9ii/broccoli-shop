@@ -22,14 +22,14 @@ class CategoryBuyerController extends ApiController
         $this->allowedAdminAction();
         
         $buyers = $category->products()
-                ->whereHas('orders')
-                ->with('orders.buyer')
-                ->get()
-                ->pluck('orders')
-                ->collapse()
-                ->pluck('buyer')
-                ->unique('id')
-                ->values();
+            ->whereHas('orders')
+            ->with('orders.buyer')
+            ->get()
+            ->pluck('orders')
+            ->collapse()
+            ->pluck('buyer')
+            ->unique('id')
+            ->values();
 
         return $this->showAll($buyers);
     }

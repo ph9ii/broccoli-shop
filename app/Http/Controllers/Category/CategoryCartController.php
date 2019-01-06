@@ -23,10 +23,10 @@ class CategoryCartController extends ApiController
         $this->allowedAdminAction();
         
         $carts = $category->products()->with('carts')
-                    ->whereHas('carts')
-                    ->get()
-                    ->pluck('carts')
-                    ->collapse();
+            ->whereHas('carts')
+            ->get()
+            ->pluck('carts')
+            ->collapse();
         
         return $this->showAll($carts);
     }

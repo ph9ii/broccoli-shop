@@ -21,12 +21,14 @@ class BuyerSellerController extends ApiController
     public function index(Buyer $buyer)
     {
         $this->allowedAdminAction();
-        
-        $sellers = $buyer->orders()->with('product.seller')
-                ->get()
-                ->pluck('product.seller')
-                ->unique('id')
-                ->values();  
+
+        $sellers = $buyer->orders()->with('orderProducts.seller')
+            ->get()
+            ->pluck('orderProducts')
+            ->collapse()
+            ->pluck('seller')
+            ->unique('id')
+            ->values();
 
         return $this->showAll($sellers);
     }

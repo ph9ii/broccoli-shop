@@ -41,11 +41,11 @@ class ProductsFeatureTest extends TestCase
     {
         $this->withExceptionHandling();
 
-        $product = create('App\Product', ['title' => "SIMPle Product"]);
+        $product = create('App\Product', ['name' => "SIMPle Product"]);
 
-        $product2 = create('App\Product', ['title' => "Simple pROduct2"]);
+        $product2 = create('App\Product', ['name' => "Simple pROduct2"]);
 
-        $product3 = create('App\Product', ['title' => "SimpLE Product3"]);
+        $product3 = create('App\Product', ['name' => "SimpLE Product3"]);
 
         $data = [
             "error" => "Unauthenticated",

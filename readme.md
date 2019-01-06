@@ -42,6 +42,7 @@ Run the following commands in your local enviroment inside your app root.
 
 ## Database & Migrations
 We are using database version control provided to us with laravel, to generate databases schemes and manage migrations.
+
 -- Available Migrations: "users, password_rests, products, orders, category_product, order_product, carts, translations".
 
 *Note*: We are using integer to speedup computation.
@@ -55,10 +56,12 @@ We are using "Soft Deletes" on some important models.
 
 ## Policies, Gateways & Scopes
 - Policies: We organize authorization logic around a particular model or resource via using different policies "App\Policies".
+
 -- Available Policies: "BuyerPolicy, UserPolicy, SellerPolicy, CarPolicy, and OrderPolicy".
 - Gateways are used here to allow admin actions.
 - Scopes: Scopes allow our API clients to request a specific set of permissions when requesting authorization to access an account. 
-Available Scopes: "BuyerScope, SellerScope".
+
+--Available Scopes: "BuyerScope, SellerScope".
 
 ## Custom Middleware
 CustomThrottleRequest, Localization, SignatureMiddleware, TransformInput.
@@ -70,7 +73,9 @@ CustomThrottleRequest, Localization, SignatureMiddleware, TransformInput.
 ## Testing & Factories
 Run full test suit by running --vendor/bin/phpunit.
 - We are using sqlite for testing and testing helpers.
+
 -- Available Tests: BuyersFeatureTest, ProductsFeatureTest, UsersFeatureTest, ProducTest(Unit).
+
 - Factiories: We are using model factory to fake data into database for testing.
 
 ## Application Hacking
@@ -81,6 +86,7 @@ Through dedicated controllers we can manage different endpoints easily, all API'
 
 ## Transformers Fractal
 - Using Fractal provides us presentation and transformation layer for complex data output, and give us extra security layer to prevent other parties from taking advantage of actual data real keys.
+
 -- Available Transformers: "BuyerTransformer, SellerTransformer, UserTransformer, ProductTransformer, CategoryTransformer, OrderTransoformer, CartTransformer".
 
 ## Headers

@@ -71,7 +71,7 @@ CustomThrottleRequest, Localization, SignatureMiddleware, TransformInput.
 - UserMailChanged: send email when user email changed.
 
 ## Testing & Factories
-Run full test suit by running --vendor/bin/phpunit.
+Run full test suite by running --vendor/bin/phpunit.
 - We are using sqlite for testing and testing helpers.
 
 -- Available Tests: BuyersFeatureTest, ProductsFeatureTest, UsersFeatureTest, ProducTest(Unit).

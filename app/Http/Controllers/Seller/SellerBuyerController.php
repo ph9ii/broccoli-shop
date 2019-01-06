@@ -11,8 +11,8 @@ class SellerBuyerController extends ApiController
     public function __construct()
     {
         parent::__construct();
-        
-        $this->middleware('scope:manage-orders');
+        $this->middleware('scope:manage-orders')->only('index');
+        $this->middleware('can:view,seller')->only('index');
     }
     
     /**
@@ -25,10 +25,10 @@ class SellerBuyerController extends ApiController
         $this->allowedAdminAction();
         
         $buyers = $seller->products()
-            ->whereHas('transactions')
-            ->with('transactions.buyer')
+            ->whereHas('orders')
+            ->with('orders.buyer')
             ->get()
-            ->pluck('transactions')
+            ->pluck('orders')
             ->collapse()
             ->pluck('buyer')
             ->unique('id')

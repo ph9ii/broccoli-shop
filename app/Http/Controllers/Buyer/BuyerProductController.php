@@ -25,7 +25,7 @@ class BuyerProductController extends ApiController
         //     $query->orderBy('id', 'desc');
         // }])->get();
 
-        $products = $buyer->transactions()
+        $products = $buyer->orders()
             ->with('product')
             ->get()
             ->pluck('product');

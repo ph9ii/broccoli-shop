@@ -22,10 +22,10 @@ class CategoryBuyerController extends ApiController
         $this->allowedAdminAction();
         
         $buyers = $category->products()
-                ->whereHas('transactions')
-                ->with('transactions.buyer')
+                ->whereHas('orders')
+                ->with('orders.buyer')
                 ->get()
-                ->pluck('transactions')
+                ->pluck('orders')
                 ->collapse()
                 ->pluck('buyer')
                 ->unique('id')

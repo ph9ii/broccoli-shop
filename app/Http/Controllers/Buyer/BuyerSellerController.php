@@ -22,7 +22,7 @@ class BuyerSellerController extends ApiController
     {
         $this->allowedAdminAction();
         
-        $sellers = $buyer->transactions()->with('product.seller')
+        $sellers = $buyer->orders()->with('product.seller')
                 ->get()
                 ->pluck('product.seller')
                 ->unique('id')

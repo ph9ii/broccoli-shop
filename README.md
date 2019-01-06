@@ -54,7 +54,7 @@ Run the following commands in your local enviroment inside your app root.
 ## Database & Migrations
 We are using database version control provided to us with laravel, to generate databases schemes and manage migrations.
 
-  -- Available Migrations: "users, password_rests, products, orders, category_product, order_product, carts, translations".
+  -- Available Migrations: "users, password_resets, products, orders, category_product, order_product, carts, translations".
 
 *Note*: We are using integer to speedup computation.
 
@@ -63,12 +63,12 @@ We are using Eloquent ORM "\Illuminate\Database\Eloquent\Model" for simply Activ
 
   -- Available Models: "Buyer, Cart, User, Seller, Category, Order, Product, Translation". 
 
-We are using "Soft Deletes" on some important models.
+We are using "Soft Deletes" on important models.
 
 ## Policies, Gateways & Scopes
 - Policies: We organize authorization logic around a particular model or resource via using different policies "App\Policies".
 
-  -- Available Policies: "BuyerPolicy, UserPolicy, SellerPolicy, CarPolicy, and OrderPolicy".
+  -- Available Policies: "BuyerPolicy, UserPolicy, SellerPolicy, CartPolicy, and OrderPolicy".
 
 - Gateways are used here to allow admin actions.
 

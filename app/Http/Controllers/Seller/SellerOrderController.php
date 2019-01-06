@@ -18,6 +18,8 @@ class SellerOrderController extends ApiController
       $this->middleware('transform.input:' . OrderTransformer::class)->only(['update']);
       $this->middleware('scope:manage-orders')->except(['index']);
       $this->middleware('can:view,seller')->only('index');
+      $this->middleware('can:update,seller')->only('update');
+      $this->middleware('can:delete,seller')->only('destroy');
     }
     
     /**

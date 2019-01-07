@@ -74,7 +74,14 @@ We are using "Soft Deletes" on important models.
 
 - Scopes: Scopes allow our API clients to request a specific set of permissions when requesting authorization to access an account. 
 
-  -- Available Scopes: "BuyerScope, SellerScope".
+  -- Available Scopes: "'purchase-product' => 'Purchase a new product',
+    'manage-products' => 'create, read, update, and delete products (CRUD)',
+    'manage-orders' => 'read, update, and delete orders',
+    'manage-account' => 'Read your account data, id, name, email, if verified, and if
+        admin (cannot read password). Modify your account data (email, and password).
+            cannot delete your account',
+    'read-general' => 'Read general information like purchasing categories, 
+            purchased products, selling products, selling categories, your transactions (purchases, carts and sales)'".
 
 ## Custom Middleware
 CustomThrottleRequest, Localization, SignatureMiddleware, TransformInput.

@@ -79,9 +79,9 @@ We are using "Soft Deletes" on important models.
     'manage-orders' => 'read, update, and delete orders',
     'manage-account' => 'Read your account data, id, name, email, if verified, and if
         admin (cannot read password). Modify your account data (email, and password).
-            cannot delete your account',
+        cannot delete your account',
     'read-general' => 'Read general information like purchasing categories, 
-            purchased products, selling products, selling categories, your transactions (purchases, carts and sales)'".
+        purchased products, selling products, selling categories, your transactions (purchases, carts and sales)'".
 
 ## Custom Middleware
 CustomThrottleRequest, Localization, SignatureMiddleware, TransformInput.
